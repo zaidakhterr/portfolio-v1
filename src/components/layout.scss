@@ -64,6 +64,7 @@ button.btn {
 a {
   cursor: pointer;
   color: inherit;
+  text-decoration: none;
 
   &:active {
     color: inherit;
@@ -120,5 +121,41 @@ a {
     height: 100%;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .nav-desktop {
+    ul {
+      list-style: none;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: flex;
+
+      li {
+        padding: 10px;
+        position: relative;
+
+        &:hover {
+          background-color: rgba($secondary, 0.2);
+        }
+
+        & + li {
+          margin-left: 10px;
+        }
+
+        a {
+          width: 100%;
+          height: 100%;
+
+          &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
