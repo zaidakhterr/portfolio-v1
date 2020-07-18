@@ -21,13 +21,17 @@ body {
   min-height: 100%;
 }
 
-button.btn {
+button {
   all: unset;
   cursor: pointer;
   outline: none;
+  border: none;
   font: inherit;
   background: none;
   text-transform: uppercase;
+}
+
+.btn {
   font-size: 1rem;
   height: 32px;
   min-width: 80px;
@@ -78,8 +82,13 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1440px;
   padding: 0 16px;
+
+  &-fluid {
+    padding: 0 16px;
+    max-width: none;
+  }
 }
 
 .page {
@@ -123,7 +132,7 @@ a {
     justify-content: space-between;
   }
 
-  .nav-desktop {
+  .nav {
     ul {
       list-style: none;
       text-decoration: none;
@@ -157,5 +166,132 @@ a {
         }
       }
     }
+
+    &-mobile {
+      z-index: 99;
+      position: absolute;
+      top: 56px;
+      right: 0;
+      height: calc(100vh - 56px);
+      width: 45%;
+      max-width: 250px;
+      background-color: #fff;
+      transition: all ease-in 200ms;
+      transform: translateX(100%);
+      visibility: hidden;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 20px 30px 5px rgba($primary, 0.2);
+
+      &.open {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      ul {
+        width: 100%;
+
+        height: 100%;
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+
+        li {
+          margin: 0 10px;
+          padding: 20px;
+        }
+      }
+    }
+
+    &-overlay {
+      width: 100%;
+      height: calc(100vh - 56px);
+      position: fixed;
+      top: 56px;
+      left: 0;
+    }
+  }
+
+  .dropdown {
+    padding: 20px;
+    position: relative;
+
+    &:hover {
+      background-color: rgba($secondary, 0.2);
+    }
+
+    .icon {
+      width: 32px;
+      height: 2px;
+      background-color: $primary;
+      position: absolute;
+      right: 4px;
+
+      &::before,
+      &::after {
+        content: " ";
+        background-color: $primary;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        transition: all ease-in 200ms;
+      }
+
+      &:before {
+        width: 20px;
+        top: -8px;
+      }
+
+      &:after {
+        width: 32px;
+        top: 8px;
+      }
+
+      &.open {
+        width: 0;
+
+        &::before {
+          animation: icontop 500ms forwards;
+        }
+        &::after {
+          animation: iconbottom 500ms forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes icontop {
+  0% {
+    width: 20px;
+    top: -8px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 32px;
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    width: 32px;
+    top: 0px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes iconbottom {
+  0% {
+    top: 8px;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(-45deg);
   }
 }

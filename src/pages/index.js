@@ -7,7 +7,140 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Home</h1>
+    <div className="container-fluid">
+      <h1>Home</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum
+        optio recusandae sunt provident voluptates ex minus nesciunt iste
+        soluta?
+      </p>
+    </div>
   </Layout>
 )
 
