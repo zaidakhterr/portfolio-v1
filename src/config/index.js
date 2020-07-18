@@ -16,18 +16,22 @@ module.exports = {
     {
       name: "GitHub",
       url: "https://github.com/zaidakhterr",
+      color: "#211F1F",
     },
     {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/zaidakhterr/",
+      color: "#0072b1",
     },
     {
       name: "Twitter",
       url: "https://twitter.com/zaidakhterr",
+      color: "#00acee",
     },
     {
       name: "Facebook",
       url: "https://www.facebook.com/zaidakhterr",
+      color: "#1778F2",
     },
   ],
 

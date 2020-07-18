@@ -1,10 +1,11 @@
 import React from "react"
+import SocialLinks from "./socialLinks"
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div>Social Icons</div>
+        <SocialLinks />
       </div>
     </footer>
   )

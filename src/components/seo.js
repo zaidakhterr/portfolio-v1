@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import config from "../config"
-import ogImage from "../images/og.png"
 
 function SEO() {
   return (
@@ -39,22 +38,7 @@ function SEO() {
           property: `og:site_name`,
           content: config.siteTitle,
         },
-        {
-          property: `og:image`,
-          content: `${config.siteUrl}${ogImage}`,
-        },
-        {
-          property: "og:image:width",
-          content: "1200",
-        },
-        {
-          property: "og:image:height",
-          content: "630",
-        },
-        {
-          property: "og:image:type",
-          content: "image/png",
-        },
+
         {
           property: "og:locale",
           content: config.siteLanguage,
@@ -83,10 +67,7 @@ function SEO() {
           name: `twitter:description`,
           content: config.siteDescription,
         },
-        {
-          property: `twitter:image`,
-          content: `${config.siteUrl}${ogImage}`,
-        },
+
         {
           property: `twitter:image:alt`,
           content: config.siteTitle,
