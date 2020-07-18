@@ -7,7 +7,7 @@ import { useWindowDimensions } from "../hooks/useWindowDimensions"
 const HeaderDesktop = () => {
   return (
     <header className="header">
-      <div className="container">
+      <div className="container-fluid">
         <Link to="/#">
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </Link>
@@ -40,7 +40,7 @@ const HeaderMobile = () => {
 
   return (
     <header className="header">
-      <div className="container">
+      <div className="container-fluid">
         <Link to="/#">
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </Link>

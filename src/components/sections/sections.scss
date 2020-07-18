@@ -1,0 +1,54 @@
+@import "../../styles//variables";
+
+.section {
+  width: 100%;
+  padding: 40px 16px;
+
+  &.full {
+    min-height: calc(100vh - 56px);
+  }
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  h1 {
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: calc(2.5rem + 2vw);
+    padding-right: 80px;
+  }
+
+  h3 {
+    font-size: calc(2.5rem + 2vw);
+    color: $primary;
+    padding-right: 40px;
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-size: calc(1rem + 0.25vw);
+    font-weight: 400;
+    color: $primary;
+    max-width: 500px;
+    margin-bottom: 32px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+      width: 152px;
+      margin-right: 24px;
+      margin-bottom: 16px;
+    }
+  }
+}

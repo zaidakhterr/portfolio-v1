@@ -1,3 +1,5 @@
+import "./sections/sections.scss"
+
 import React from "react"
 import Hero from "./sections/hero"
 
