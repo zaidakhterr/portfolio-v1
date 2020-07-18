@@ -1,36 +1,23 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import config from "../config"
+import ogImage from "../images/og.png"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-
+function SEO() {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: `en`,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={config.siteTitle}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: config.siteDescription,
+        },
+        {
+          name: `keywords`,
+          content: config.siteKeywords,
         },
         {
           property: `og:title`,
@@ -38,44 +25,75 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: config.siteDescription,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: config.siteUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: title,
+        },
+        {
+          property: `og:image`,
+          content: `${config.siteUrl}${ogImage}`,
+        },
+        {
+          property: "og:image:width",
+          content: "1200",
+        },
+        {
+          property: "og:image:height",
+          content: "630",
+        },
+        {
+          property: "og:image:type",
+          content: "image/png",
+        },
+        {
+          property: "og:locale",
+          content: config.siteLanguage,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
+          property: `twitter:url`,
+          content: config.siteUrl,
+        },
+        {
+          name: `twitter:site`,
+          content: config.twitterHandle,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: config.twitterHandle,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: config.siteTitle,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: config.siteDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: `${config.siteUrl}${ogImage}`,
+        },
+        {
+          property: `twitter:image:alt`,
+          content: config.siteTitle,
         },
       ].concat(meta)}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO
