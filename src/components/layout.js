@@ -8,7 +8,11 @@ import Footer from "./footer"
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
+  require("smooth-scroll")('a[href*="#"]', {
+    speed: 300,
+    topOnEmptyHash: true,
+    offset: 56,
+  })
 }
 
 const Layout = ({ children }) => {

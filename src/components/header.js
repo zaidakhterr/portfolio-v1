@@ -8,7 +8,7 @@ const HeaderDesktop = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/#hero">
+        <Link to="/#">
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </Link>
         <nav className="nav nav-desktop">
@@ -41,7 +41,7 @@ const HeaderMobile = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/#hero">
+        <Link to="/#">
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </Link>
         <nav className={`nav nav-mobile ${isOpen ? "open" : ""}`}>
