@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Logo from "../images/zaidakhterr.svg"
 import { useWindowDimensions } from "../hooks/useWindowDimensions"
+import { navLinks } from "../config"
 
 const HeaderDesktop = () => {
   return (
@@ -13,20 +14,13 @@ const HeaderDesktop = () => {
         </Link>
         <nav className="nav nav-desktop">
           <ul>
-            <li>
-              <Link to="/#work">Work</Link>
-            </li>
-            <li>
-              <Link to="/#experience">Experience</Link>
-            </li>
-            <li>
-              <Link to="/#skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="/#blogs">Blogs</Link>
-            </li>
-            <li>
-              <Link to="/#contact">Contact</Link>
+            {navLinks.map(link => (
+              <li>
+                <Link to={link.to}>{link.name}</Link>
+              </li>
+            ))}
+            <li className="nav-btn">
+              <a href="">Resume</a>
             </li>
           </ul>
         </nav>
@@ -46,20 +40,18 @@ const HeaderMobile = () => {
         </Link>
         <nav className={`nav nav-mobile ${isOpen ? "open" : ""}`}>
           <ul>
-            <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="/#work">Work</Link>
-            </li>
-            <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="/#experience">Experience</Link>
-            </li>
-            <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="/#skills">Skills</Link>
-            </li>
-            <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="/#blogs">Blogs</Link>
-            </li>
-            <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="/#contact">Contact</Link>
+            {navLinks.map(link => (
+              <li>
+                <Link
+                  onClick={() => setIsOpened(isOpen => !isOpen)}
+                  to={link.to}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            <li className="nav-btn">
+              <a href="">Resume</a>
             </li>
           </ul>
         </nav>

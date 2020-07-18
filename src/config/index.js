@@ -12,6 +12,7 @@ module.exports = {
   email: "zaidakhter1202@gmail.com",
   github: "https://github.com/zaidakhterr",
   twitterHandle: "@zaidakhterr",
+
   socialLinks: [
     {
       name: "GitHub",
@@ -32,6 +33,25 @@ module.exports = {
       name: "Facebook",
       url: "https://www.facebook.com/zaidakhterr",
       color: "#1778F2",
+    },
+  ],
+
+  navLinks: [
+    {
+      name: "Projects",
+      to: "/#work",
+    },
+    {
+      name: "Skills",
+      to: "/#skills",
+    },
+    {
+      name: "Blog",
+      to: "/#blog",
+    },
+    {
+      name: "Contact Me",
+      to: "/#contact",
     },
   ],
 
