@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "Zaid Akhter | WebDeveloper",
+  siteTitle: "Zaid Akhter | Web Developer",
   siteDescription:
     "I am a Fullstack Developer from Karachi, PK who specializes in building eye-catching and blazing-fast websites using modern web technologies.",
   siteKeywords:
@@ -7,6 +7,7 @@ module.exports = {
   siteUrl: "",
   siteLanguage: "en_US",
   name: "Zaid Akhter",
+  shortName: "zaidakhterr",
   location: "Karachi, PK",
   email: "zaidakhter1202@gmail.com",
   github: "https://github.com/zaidakhterr",
@@ -48,4 +49,6 @@ module.exports = {
       url: "/#contact",
     },
   ],
+
+  charcoalColor: "#323330",
 }

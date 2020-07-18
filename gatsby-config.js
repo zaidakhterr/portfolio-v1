@@ -1,8 +1,10 @@
+const config = require("./src/config")
+
 module.exports = {
   siteMetadata: {
-    title: `Zaid Akhter`,
-    description: `My portfolio site.`,
-    author: `@zaidakhter`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,11 +21,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: config.name,
+        short_name: config.shortName,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: config.charcoalColor,
+        theme_color: config.charcoalColor,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
