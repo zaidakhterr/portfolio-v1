@@ -21,7 +21,7 @@ function SEO() {
         },
         {
           property: `og:title`,
-          content: title,
+          content: config.siteTitle,
         },
         {
           property: `og:description`,
@@ -37,7 +37,7 @@ function SEO() {
         },
         {
           property: `og:site_name`,
-          content: title,
+          content: config.siteTitle,
         },
         {
           property: `og:image`,
@@ -91,7 +91,7 @@ function SEO() {
           property: `twitter:image:alt`,
           content: config.siteTitle,
         },
-      ].concat(meta)}
+      ]}
     />
   )
 }
