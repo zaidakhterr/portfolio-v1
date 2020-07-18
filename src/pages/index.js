@@ -8,8 +8,8 @@ import Section from "../components/section"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Section section="hero" fluid full />
-    <Section section="hero" fluid />
+    <Section id="hero" section="hero" fluid full />
+    <Section id="contact" section="hero" fluid full />
   </Layout>
 )
 

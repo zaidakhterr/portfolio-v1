@@ -8,25 +8,25 @@ const HeaderDesktop = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/">
+        <Link to="/#hero">
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </Link>
         <nav className="nav nav-desktop">
           <ul>
             <li>
-              <Link to="#work">Work</Link>
+              <Link to="/#work">Work</Link>
             </li>
             <li>
-              <Link to="#experience">Experience</Link>
+              <Link to="/#experience">Experience</Link>
             </li>
             <li>
-              <Link to="#skills">Skills</Link>
+              <Link to="/#skills">Skills</Link>
             </li>
             <li>
-              <Link to="#blogs">Blogs</Link>
+              <Link to="/#blogs">Blogs</Link>
             </li>
             <li>
-              <Link to="#contact">Contact</Link>
+              <Link to="/#contact">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -41,25 +41,25 @@ const HeaderMobile = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/">
+        <Link to="/#hero">
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </Link>
         <nav className={`nav nav-mobile ${isOpen ? "open" : ""}`}>
           <ul>
             <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="#work">Work</Link>
+              <Link to="/#work">Work</Link>
             </li>
             <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="#experience">Experience</Link>
+              <Link to="/#experience">Experience</Link>
             </li>
             <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="#skills">Skills</Link>
+              <Link to="/#skills">Skills</Link>
             </li>
             <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="#blogs">Blogs</Link>
+              <Link to="/#blogs">Blogs</Link>
             </li>
             <li onClick={() => setIsOpened(isOpen => !isOpen)}>
-              <Link to="#contact">Contact</Link>
+              <Link to="/#contact">Contact</Link>
             </li>
           </ul>
         </nav>
