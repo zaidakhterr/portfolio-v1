@@ -20,7 +20,13 @@ const HeaderDesktop = () => {
               </li>
             ))}
             <li className="nav-btn">
-              <a href="">Resume</a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                Resume
+              </a>
             </li>
           </ul>
         </nav>
@@ -51,7 +57,13 @@ const HeaderMobile = () => {
               </li>
             ))}
             <li className="nav-btn">
-              <a href="">Resume</a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                Resume
+              </a>
             </li>
           </ul>
         </nav>

@@ -15,7 +15,11 @@ const Hero = () => {
         <Link to="/#work">
           <button className="btn btn-primary">View My Work</button>
         </Link>
-        <a href="">
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           <button className="btn">View My Resume</button>
         </a>
       </div>

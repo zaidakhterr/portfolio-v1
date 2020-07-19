@@ -5,7 +5,12 @@ const SocialLinks = () => {
   return (
     <div className="social">
       {socialLinks.map(social => (
-        <a href={social.url} target="_blank" rel="noreferrer" className="icon">
+        <a
+          href={social.url}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className="icon"
+        >
           <img
             alt={social.name}
             src={require(`../images/socialIcons/${social.name.toLowerCase()}.svg`)}
