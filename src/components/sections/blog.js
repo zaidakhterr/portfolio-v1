@@ -6,11 +6,12 @@ const Article = ({ article }) => {
   return (
     <a href={article.url} target="_blank" rel="nofollow noopener noreferrer">
       <div className="article">
-        <img src={article.cover_image} alt={article.title} />
         <h3>{article.title}</h3>
-        {article.tags.map(tag => (
-          <span className="tag">{tag}</span>
-        ))}
+        <div className="tag-list">
+          {article.tags.map(tag => (
+            <span className="tag">{tag}</span>
+          ))}
+        </div>
         <p>{article.description}</p>
       </div>
     </a>
@@ -27,7 +28,6 @@ const Blog = () => {
             tags
             url
             description
-            cover_image
           }
         }
       }
@@ -36,10 +36,13 @@ const Blog = () => {
 
   return (
     <>
-      <h1>Blog</h1>
-      {data.allDevArticles.nodes.map(node => (
-        <Article article={node.article} />
-      ))}
+      <h2>Blog</h2>
+      <p>I love to write and share with others what I have learnt.</p>
+      <div className="article-list">
+        {data.allDevArticles.nodes.map(node => (
+          <Article article={node.article} />
+        ))}
+      </div>
     </>
   )
 }
