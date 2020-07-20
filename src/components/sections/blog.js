@@ -59,16 +59,16 @@ const Blog = () => {
 
   return (
     <>
+      <div className="section-heading">
+        <Fade left>
+          <h2>Blog</h2>
+        </Fade>
+        <span></span>
+      </div>
       <Fade left>
-        <>
-          <div className="section-heading">
-            <h2>Blog</h2>
-            <span></span>
-          </div>
-          <p className="section-description">
-            I love to write and share with others what I have learnt.
-          </p>
-        </>
+        <p className="section-description">
+          I love to write and share with others what I have learnt.
+        </p>
       </Fade>
       <div className="article-list">
         {data.allDevArticles.nodes.map((node, i) => (
