@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import Logo from "../images/zaidakhterr.svg"
-import { useWindowDimensions } from "../hooks/useWindowDimensions"
+import { useMediaQuery } from "react-responsive"
 import { navLinks } from "../config"
 
 const scrollToTop = () => {
@@ -91,8 +91,9 @@ const HeaderMobile = () => {
 }
 
 const Header = () => {
-  const { width } = useWindowDimensions()
-  const isMobile = width < 760
+  const isMobile = useMediaQuery({
+    query: "(max-width: 760px)",
+  })
 
   return isMobile ? <HeaderMobile /> : <HeaderDesktop />
 }
