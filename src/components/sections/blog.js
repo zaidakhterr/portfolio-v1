@@ -57,8 +57,12 @@ const Blog = () => {
 
   return (
     <>
-      <h2>Blog</h2>
-      <p>I love to write and share with others what I have learnt.</p>
+      <Fade left>
+        <>
+          <h2>Blog</h2>
+          <p>I love to write and share with others what I have learnt.</p>
+        </>
+      </Fade>
       <div className="article-list">
         {data.allDevArticles.nodes.map((node, i) => (
           <Fade bottom>
