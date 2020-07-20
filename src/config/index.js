@@ -4,7 +4,7 @@ module.exports = {
     "I am a Fullstack Developer from Karachi, PK who specializes in building eye-catching and blazing-fast websites using modern web technologies.",
   siteKeywords:
     "Zaid Akhter, Zaid, Akhter, zaidakhterr, front-end engineer, web developer, full-stack developer, javascript, react.js, node.js",
-  siteUrl: "",
+  siteUrl: "https://zaidakhterr.netlify.app/",
   siteLanguage: "en_US",
   name: "Zaid Akhter",
   shortName: "zaidakhterr",
