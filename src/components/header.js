@@ -4,11 +4,17 @@ import Logo from "../images/zaidakhterr.svg"
 import { useWindowDimensions } from "../hooks/useWindowDimensions"
 import { navLinks } from "../config"
 
+const scrollToTop = () => {
+  if (typeof window !== undefined) {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+}
+
 const HeaderDesktop = () => {
   return (
     <header className="header">
       <div className="container-fluid">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <button onClick={scrollToTop}>
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </button>
         <nav className="nav nav-desktop">
@@ -40,7 +46,7 @@ const HeaderMobile = () => {
   return (
     <header className="header">
       <div className="container-fluid">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <button onClick={scrollToTop}>
           <img src={Logo} alt="zaidakhterr" height="20px" />
         </button>
         <nav className={`nav nav-mobile ${isOpen ? "open" : ""}`}>
