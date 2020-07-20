@@ -2,6 +2,7 @@ import "./sections/sections.scss"
 
 import React from "react"
 import Hero from "./sections/hero"
+import Work from "./sections/work"
 
 const Section = ({ fluid = false, full = false, section, id }) => {
   let renderSection = null
@@ -9,6 +10,9 @@ const Section = ({ fluid = false, full = false, section, id }) => {
   switch (section) {
     case "hero":
       renderSection = <Hero />
+      break
+    case "work":
+      renderSection = <Work />
       break
 
     default:

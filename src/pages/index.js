@@ -8,6 +8,7 @@ const IndexPage = () => (
   <Layout>
     <SEO />
     <Section id="hero" section="hero" full />
+    <Section id="work" section="work" full />
   </Layout>
 )
 
