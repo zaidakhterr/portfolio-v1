@@ -30,5 +30,11 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
+    {
+      resolve: "gatsby-source-dev",
+      options: {
+        username: "zaidakhterr",
+      },
+    },
   ],
 }
