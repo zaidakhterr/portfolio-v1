@@ -1,5 +1,5 @@
 require("dotenv").config()
-require("nodemailer")
+const nodemailer = require("nodemailer")
 
 const { MAIL_LOGIN, MAIL_PASSWORD } = process.env
 
