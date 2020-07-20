@@ -39,19 +39,19 @@ module.exports = {
   navLinks: [
     {
       name: "Projects",
-      to: "/#work",
+      to: "#work",
     },
     {
       name: "Skills",
-      to: "/#skills",
+      to: "#skills",
     },
     {
       name: "Blog",
-      to: "/#blog",
+      to: "#blog",
     },
     {
       name: "Contact Me",
-      to: "/#contact",
+      to: "#contact",
     },
   ],
 

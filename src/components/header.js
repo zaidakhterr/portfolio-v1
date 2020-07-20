@@ -8,9 +8,9 @@ const HeaderDesktop = () => {
   return (
     <header className="header">
       <div className="container-fluid">
-        <Link to="/#">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src={Logo} alt="zaidakhterr" height="20px" />
-        </Link>
+        </button>
         <nav className="nav nav-desktop">
           <ul>
             {navLinks.map(link => (
@@ -40,9 +40,9 @@ const HeaderMobile = () => {
   return (
     <header className="header">
       <div className="container-fluid">
-        <Link to="/#">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src={Logo} alt="zaidakhterr" height="20px" />
-        </Link>
+        </button>
         <nav className={`nav nav-mobile ${isOpen ? "open" : ""}`}>
           <ul>
             {navLinks.map(link => (
