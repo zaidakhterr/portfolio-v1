@@ -42,7 +42,9 @@ const Article = ({ article }) => {
 const Blog = () => {
   const data = useStaticQuery(graphql`
     {
-      allDevArticles {
+      allDevArticles(
+        sort: { fields: article___positive_reactions_count, order: DESC }
+      ) {
         nodes {
           article {
             title
@@ -59,8 +61,13 @@ const Blog = () => {
     <>
       <Fade left>
         <>
-          <h2>Blog</h2>
-          <p>I love to write and share with others what I have learnt.</p>
+          <div className="section-heading">
+            <h2>Blog</h2>
+            <span></span>
+          </div>
+          <p className="section-description">
+            I love to write and share with others what I have learnt.
+          </p>
         </>
       </Fade>
       <div className="article-list">

@@ -2,10 +2,36 @@
 
 .section {
   width: 100%;
-  padding: 40px 16px;
+  padding: 40px 32px;
 
   &.full {
     min-height: calc(100vh - 56px);
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: calc(2.5rem + 1vw);
+      font-weight: 400;
+      color: $primary;
+      position: relative;
+      margin-right: 24px;
+    }
+
+    span {
+      margin-top: 8px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba($primary, 0.15);
+    }
+  }
+
+  .section-description {
+    font-size: calc(1rem + 0.25vw);
+    padding: 12px 4px;
   }
 }
 
@@ -13,8 +39,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
 
   h1 {
     font-size: calc(1rem + 0.5vw);
@@ -54,28 +78,6 @@
 }
 
 #blog {
-  padding-left: 32px;
-  padding-right: 32px;
-
-  h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    color: $primary;
-    display: inline-block;
-    position: relative;
-
-    &::after {
-      content: " ";
-      height: 1px;
-      width: 40px;
-    }
-  }
-
-  & > p {
-    font-size: 1.2rem;
-    padding: 12px 4px;
-  }
-
   .article-list {
     display: grid;
     gap: 32px;
