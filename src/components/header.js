@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-
 import Logo from "../images/zaidakhterr.svg"
 import { useWindowDimensions } from "../hooks/useWindowDimensions"
 import { navLinks } from "../config"
