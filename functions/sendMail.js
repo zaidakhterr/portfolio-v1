@@ -1,8 +1,6 @@
 require("dotenv").config()
 const nodemailer = require("nodemailer")
-
 const { MAIL_LOGIN, MAIL_PASSWORD } = process.env
-
 exports.handler = function (event, context, callback) {
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -13,31 +11,30 @@ exports.handler = function (event, context, callback) {
       pass: MAIL_PASSWORD,
     },
   })
-
-  const { name, email, message } = JSON.parse(event.body)
-
+  const { email, subject, message } = JSON.parse(event.body)
   transporter.sendMail(
     {
       from: MAIL_LOGIN,
+      to: email,
+      subject: subject,
       to: MAIL_LOGIN,
-      subject: `${name} | ${email}`,
-      text: `${message}
-
-      Name: ${name}
-      Email: ${email}`,
+      subject: `${subject} | ${email}`,
+      text: message,
     },
     function (error, info) {
       if (error) {
         callback(error)
       } else {
+        callback(null, {
+          statusCode: 200,
+          body: "Ok",
+        })
         transporter.sendMail(
           {
             from: MAIL_LOGIN,
             to: email,
-            subject: "I will get back to you soon",
-            text: `Hi👋 ${name}, thanks for reaching out to me. I have recieved your message and will be contacting you soon.
-
-            Muhammad Zaid Akhter`,
+            subject: "Thanks for contacting me.",
+            text: "I have recieved your message. I will get back to you soon.",
           },
           function (error, info) {
             if (error) {
@@ -53,4 +50,3 @@ exports.handler = function (event, context, callback) {
       }
     }
   )
-}
