@@ -5,7 +5,7 @@ const { MAIL_LOGIN, MAIL_PASSWORD } = process.env
 
 exports.handler = function (event, context, callback) {
   let transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
     auth: {
       user: MAIL_LOGIN,
       pass: MAIL_PASSWORD,
