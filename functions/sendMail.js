@@ -19,7 +19,6 @@ exports.handler = function (event, context, callback) {
   let handlebarsOptions = {
     viewEngine: {
       extName: ".html",
-      partialsDir: "../templates/",
       layoutsDir: "../templates/",
       defaultLayout: "",
     },
@@ -36,7 +35,8 @@ exports.handler = function (event, context, callback) {
       from: MAIL_LOGIN,
       to: MAIL_LOGIN,
       subject: `${subject} | ${email}`,
-      text: message,
+      template: "thankYouEmail",
+      context: { name: message },
     },
     function (error, info) {
       if (error) {
