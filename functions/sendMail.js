@@ -27,10 +27,6 @@ exports.handler = function (event, context, callback) {
       if (error) {
         callback(error)
       } else {
-        callback(null, {
-          statusCode: 200,
-          body: "Ok",
-        })
         transporter.sendMail(
           {
             from: MAIL_LOGIN,
@@ -52,3 +48,4 @@ exports.handler = function (event, context, callback) {
       }
     }
   )
+}
