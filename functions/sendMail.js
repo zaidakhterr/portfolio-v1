@@ -19,11 +19,11 @@ exports.handler = function (event, context, callback) {
   let handlebarsOptions = {
     viewEngine: {
       extName: ".html",
-      partialsDir: "./templates/",
-      layoutsDir: "./templates/",
+      partialsDir: "../templates/",
+      layoutsDir: "../templates/",
       defaultLayout: "",
     },
-    viewPath: path.resolve("./templates/"),
+    viewPath: path.resolve("../templates/"),
     extName: ".html",
   }
 
