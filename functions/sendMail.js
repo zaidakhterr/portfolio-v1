@@ -1,7 +1,6 @@
 require("dotenv").config()
 const path = require("path")
 const nodemailer = require("nodemailer")
-const hbs = require("nodemailer-express-handlebars")
 
 const { MAIL_LOGIN, MAIL_PASSWORD } = process.env
 
@@ -16,27 +15,17 @@ exports.handler = function (event, context, callback) {
     },
   })
 
-  let handlebarsOptions = {
-    viewEngine: {
-      extName: ".html",
-      layoutsDir: "../templates/",
-      defaultLayout: "",
-    },
-    viewPath: path.resolve("../templates/"),
-    extName: ".html",
-  }
-
-  transporter.use("compile", hbs(handlebarsOptions))
-
-  const { name, email, subject, message } = JSON.parse(event.body)
+  const { name, email, message } = JSON.parse(event.body)
 
   transporter.sendMail(
     {
       from: MAIL_LOGIN,
       to: MAIL_LOGIN,
-      subject: `${subject} | ${email}`,
-      template: "thankYouEmail",
-      context: { name: message },
+      subject: `${name} | ${email}`,
+      text: `${message}
+
+      Name: ${name}
+      Email: ${email}`,
     },
     function (error, info) {
       if (error) {
@@ -46,9 +35,10 @@ exports.handler = function (event, context, callback) {
           {
             from: MAIL_LOGIN,
             to: email,
-            subject: "Thanks for contacting me.",
-            template: "thankYouEmail",
-            context: { name },
+            subject: "I will get back to you soon",
+            text: `Hi👋 ${name}, thanks for reaching out to me. I have recieved your message and will be contacting you soon.
+
+            Muhammad Zaid Akhter`,
           },
           function (error, info) {
             if (error) {
