@@ -18,10 +18,11 @@ exports.handler = function (event, context, callback) {
       from: MAIL_LOGIN,
       to: MAIL_LOGIN,
       subject: `${name} | ${email}`,
-      text: `${message}
+      text: `
+${message}
 
-      Name: ${name}
-      Email: ${email}`,
+Name: ${name}
+Email: ${email}`,
     },
     function (error, info) {
       if (error) {
@@ -32,9 +33,11 @@ exports.handler = function (event, context, callback) {
             from: MAIL_LOGIN,
             to: email,
             subject: "I will get back to you soon.",
-            text: `Hi👋 ${name}, thank you for reaching out to me. I have recieved your message and will be replying soon.
+            text: `
+Hi👋 ${name}, thank you for reaching out to me. I have recieved your message and will be replying soon.
 
-            Muhammad Zaid Akhter`,
+Muhammad Zaid Akhter
+            `,
           },
           function (error, info) {
             if (error) {
