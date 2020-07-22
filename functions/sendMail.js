@@ -34,7 +34,7 @@ Email: ${email}`,
             to: email,
             subject: "I will get back to you soon.",
             text: `
-Hi👋 ${name}, thank you for reaching out to me. I have recieved your message and will be replying soon.
+Hi ${name}, thank you for reaching out to me. I have recieved your message and will be replying soon.
 
 Muhammad Zaid Akhter
             `,
