@@ -11,7 +11,7 @@ exports.handler = function (event, context, callback) {
     },
   })
 
-  const { email, name, message } = JSON.parse(event.body)
+  const { name, email, subject, message } = JSON.parse(event.body)
 
   transporter.sendMail(
     {
@@ -19,6 +19,8 @@ exports.handler = function (event, context, callback) {
       to: MAIL_LOGIN,
       subject: `${name} | ${email}`,
       text: `
+Subject: ${subject}
+
 ${message}
 
 Name: ${name}
