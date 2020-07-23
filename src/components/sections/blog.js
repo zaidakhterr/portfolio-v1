@@ -65,7 +65,7 @@ const Blog = () => {
         </Fade>
         <span></span>
       </div>
-      <Fade left>
+      <Fade>
         <p className="section-description">
           I love to write and share with others what I have learnt.
         </p>

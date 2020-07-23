@@ -190,11 +190,11 @@
         }
 
         &.input-error {
-          border-color: red;
+          border-color: #ce2c04;
 
           &:hover,
           &:focus {
-            border-color: red;
+            border-color: #ce2c04;
           }
         }
       }
@@ -203,6 +203,23 @@
         resize: vertical;
         min-height: 120px;
         max-height: 500px;
+      }
+    }
+
+    .error-div {
+      margin: 8px auto;
+      color: #ce2c04;
+      text-align: center;
+      line-height: 1.2rem;
+      max-width: 400px;
+
+      a {
+        color: $primary;
+        text-decoration: underline;
+
+        &:hover {
+          color: #000;
+        }
       }
     }
   }

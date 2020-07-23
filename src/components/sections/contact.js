@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
+import Fade from "react-reveal/Fade"
 import * as EmailValidator from "email-validator"
+import axios from "axios"
 
 const useInputError = (state, email = false) => {
   const [dirty, setDirty] = useState(false)
@@ -35,10 +37,16 @@ const Contact = () => {
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  // useEffect(() => {
-  //   if (nameError || emailError || subjectError || messageError) setError(true)
-  //   else setError(false)
-  // }, [nameError, emailError, subjectError, messageError])
+  const resetFields = () => {
+    setName("")
+    setEmail("")
+    setSubject("")
+    setMessage("")
+    setNameError(false)
+    setEmailError(false)
+    setSubjectError(false)
+    setMessageError(false)
+  }
 
   const hasErrors = useCallback(() => {
     if (!nameError && name.length === 0) {
@@ -69,71 +77,96 @@ const Contact = () => {
     messageError,
   ])
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    console.log("Submit", name, email, subject, message)
+
     if (!hasErrors()) {
-      console.log("No Errors")
+      try {
+        setLoading(true)
+        setError(false)
+        await new Promise((res, rej) => {
+          setTimeout(() => {
+            res("success")
+          }, 2000)
+        })
+        setLoading(false)
+        resetFields()
+      } catch (err) {
+        setLoading(false)
+        setError(true)
+      }
     }
   }
 
   return (
     <div>
       <div className="section-heading">
-        <h2>Contact Me</h2>
+        <Fade left>
+          <h2>Contact Me</h2>
+        </Fade>
         <span></span>
       </div>
-      <p className="section-description">
-        Discuss a project or just want to say hi? My inbox is open for all.
-      </p>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="input-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            className={`${nameError ? "input-error" : ""}`}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            className={`${emailError ? "input-error" : ""}`}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="subject">Subject</label>
-          <input
-            type="text"
-            name="subject"
-            id="subject"
-            value={subject}
-            onChange={e => setSubject(e.target.value)}
-            className={`${subjectError ? "input-error" : ""}`}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            value={message}
-            onChange={e => setMessage(e.target.value)}
-            className={`${messageError ? "input-error" : ""}`}
-          />
-        </div>
-        <button type="submit" className="btn">
-          Send
-        </button>
-      </form>
+      <Fade>
+        <p className="section-description">
+          Discuss a project or just want to say hi? My inbox is open for all.
+        </p>
+      </Fade>
+      <Fade bottom>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="input-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              className={`${nameError ? "input-error" : ""}`}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className={`${emailError ? "input-error" : ""}`}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="subject">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
+              className={`${subjectError ? "input-error" : ""}`}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+              className={`${messageError ? "input-error" : ""}`}
+            />
+          </div>
+          <button disabled={loading} type="submit" className="btn">
+            {loading ? "..." : "Send"}
+          </button>
+          {error && (
+            <div className="error-div">
+              Oops there were some problems. Try to send an message from{" "}
+              <a href="mailto:zaidakhter1202@gmail.com">here</a>.
+            </div>
+          )}
+        </form>
+      </Fade>
     </div>
   )
 }
