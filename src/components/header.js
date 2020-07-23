@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import Logo from "../images/zaidakhterr.svg"
-import { useMediaQuery } from "react-responsive"
 import { navLinks } from "../config"
 
 const scrollToTop = () => {
