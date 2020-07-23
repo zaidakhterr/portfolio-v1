@@ -188,6 +188,15 @@
           outline: none;
           border-color: $primary;
         }
+
+        &.input-error {
+          border-color: red;
+
+          &:hover,
+          &:focus {
+            border-color: red;
+          }
+        }
       }
 
       textarea {
