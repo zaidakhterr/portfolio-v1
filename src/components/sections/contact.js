@@ -3,6 +3,8 @@ import Fade from "react-reveal/Fade"
 import * as EmailValidator from "email-validator"
 import axios from "axios"
 
+axios.defaults.headers.post["Content-Type"] = "application/json"
+
 const useInputError = (state, email = false) => {
   const [dirty, setDirty] = useState(false)
   const [error, setError] = useState(false)
@@ -75,6 +77,10 @@ const Contact = () => {
     emailError,
     subjectError,
     messageError,
+    setNameError,
+    setEmailError,
+    setSubjectError,
+    setMessageError,
   ])
 
   const handleSubmit = async e => {
@@ -84,14 +90,14 @@ const Contact = () => {
       try {
         setLoading(true)
         setError(false)
-        await new Promise((res, rej) => {
-          setTimeout(() => {
-            rej("error")
-          }, 2000)
-        })
+        await axios.post(
+          "https://zaidakhterr.netlify.app/.netlify/functions/sendMail",
+          { name, email, subject, message }
+        )
         setLoading(false)
         resetFields()
       } catch (err) {
+        console.log(err)
         setLoading(false)
         setError(true)
       }
@@ -99,7 +105,7 @@ const Contact = () => {
   }
 
   return (
-    <div>
+    <>
       <div className="section-heading">
         <Fade left>
           <h2>Contact Me</h2>
@@ -168,7 +174,7 @@ const Contact = () => {
           )}
         </form>
       </Fade>
-    </div>
+    </>
   )
 }
 
