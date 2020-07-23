@@ -169,10 +169,7 @@
     .input-group {
       display: flex;
       flex-direction: column;
-
-      & + .input-group {
-        margin-top: 16px;
-      }
+      margin-bottom: 16px;
 
       label {
         font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");

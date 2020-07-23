@@ -6,6 +6,11 @@ const Contact = () => {
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
 
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log("Submit", name, email, subject, message)
+  }
+
   return (
     <div>
       <div className="section-heading">
@@ -15,7 +20,7 @@ const Contact = () => {
       <p className="section-description">
         Discuss a project or just want to say hi? My inbox is open for all.
       </p>
-      <form className="contact-form">
+      <form onSubmit={handleSubmit} className="contact-form">
         <div className="input-group">
           <label htmlFor="name">Name</label>
           <input
@@ -55,6 +60,9 @@ const Contact = () => {
             onChange={e => setMessage(e.target.value)}
           />
         </div>
+        <button type="submit" className="btn">
+          Send
+        </button>
       </form>
     </div>
   )
