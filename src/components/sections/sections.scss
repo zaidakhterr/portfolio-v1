@@ -14,7 +14,7 @@
     justify-content: space-between;
 
     h2 {
-      font-size: calc(2.5rem + 1vw);
+      font-size: unquote("min(4rem, calc(2.5rem + 1vw))");
       font-weight: 400;
       color: $primary;
       position: relative;
@@ -30,7 +30,7 @@
   }
 
   .section-description {
-    font-size: calc(1rem + 0.25vw);
+    font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
     padding: 12px 4px;
   }
 }
@@ -41,24 +41,24 @@
   justify-content: center;
 
   h1 {
-    font-size: calc(1rem + 0.5vw);
+    font-size: unquote("min(1.8rem, calc(1rem + 0.5vw))");
     font-weight: 400;
   }
 
   h2 {
-    font-size: calc(2.5rem + 2vw);
+    font-size: unquote("min(4rem, calc(2.5rem + 1vw))");
     padding-right: 80px;
   }
 
   h3 {
-    font-size: calc(2.5rem + 2vw);
+    font-size: unquote("min(4rem, calc(2.5rem + 1vw))");
     color: $primary;
     padding-right: 40px;
     margin-bottom: 32px;
   }
 
   p {
-    font-size: calc(1rem + 0.25vw);
+    font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
     font-weight: 400;
     color: $primary;
     max-width: 500px;

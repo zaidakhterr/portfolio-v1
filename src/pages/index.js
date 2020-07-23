@@ -9,6 +9,7 @@ const IndexPage = () => (
     <Section id="hero" section="hero" full />
     <Section id="work" section="work" full />
     <Section id="blog" section="blog" />
+    <Section id="contact" section="contact" />
   </Layout>
 )
 
