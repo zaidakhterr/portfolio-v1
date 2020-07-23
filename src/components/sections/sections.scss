@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/breakpoints";
 
 .section {
   width: 100%;
@@ -32,7 +33,7 @@
 
   .section-description {
     font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
-    padding: 12px 4px;
+    padding: 12px 0;
   }
 }
 
@@ -82,8 +83,12 @@
   .article-list {
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr 1fr;
     margin-top: 32px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
 
     .article {
       border: solid 1px rgba($primary, 0.9);

@@ -92,7 +92,7 @@ const HeaderMobile = () => {
 
 const Header = () => {
   const isMobile = useMediaQuery({
-    query: "(max-width: 760px)",
+    query: "(max-width: 767px)",
   })
 
   return isMobile ? <HeaderMobile /> : <HeaderDesktop />
