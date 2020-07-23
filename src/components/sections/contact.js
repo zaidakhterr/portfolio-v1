@@ -86,7 +86,7 @@ const Contact = () => {
         setError(false)
         await new Promise((res, rej) => {
           setTimeout(() => {
-            res("success")
+            rej("error")
           }, 2000)
         })
         setLoading(false)
@@ -138,6 +138,7 @@ const Contact = () => {
           <div className="input-group">
             <label htmlFor="subject">Subject</label>
             <input
+              autoComplete="off"
               type="text"
               name="subject"
               id="subject"
@@ -161,8 +162,8 @@ const Contact = () => {
           </button>
           {error && (
             <div className="error-div">
-              Oops there were some problems. Try to send an message from{" "}
-              <a href="mailto:zaidakhter1202@gmail.com">here</a>.
+              Oops there was some problem. Please try to send message again by
+              clicking <a href="mailto:zaidakhter1202@gmail.com">here</a>.
             </div>
           )}
         </form>
