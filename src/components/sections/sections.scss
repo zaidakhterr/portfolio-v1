@@ -157,3 +157,47 @@
     }
   }
 }
+
+#contact {
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      & + .input-group {
+        margin-top: 16px;
+      }
+
+      label {
+        font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
+        margin-bottom: 4px;
+      }
+
+      input,
+      textarea {
+        padding: 8px;
+        border: 1px solid #d9d9d9;
+        font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
+        transition: border 250ms;
+
+        &:hover,
+        &:focus {
+          outline: none;
+          border-color: $primary;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+        max-height: 500px;
+      }
+    }
+  }
+}
