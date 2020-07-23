@@ -12,7 +12,7 @@ const scrollToTop = () => {
 
 const HeaderDesktop = () => {
   return (
-    <header className="header">
+    <header className="header header-desktop">
       <div className="container-fluid">
         <button onClick={scrollToTop}>
           <img src={Logo} alt="zaidakhterr" height="20px" />
@@ -44,7 +44,7 @@ const HeaderMobile = () => {
   const [isOpen, setIsOpened] = useState(false)
 
   return (
-    <header className="header">
+    <header className="header header-mobile">
       <div className="container-fluid">
         <button onClick={scrollToTop}>
           <img src={Logo} alt="zaidakhterr" height="20px" />
@@ -91,11 +91,12 @@ const HeaderMobile = () => {
 }
 
 const Header = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 767px)",
-  })
-
-  return isMobile ? <HeaderMobile /> : <HeaderDesktop />
+  return (
+    <>
+      <HeaderMobile />
+      <HeaderDesktop />
+    </>
+  )
 }
 
 export default Header

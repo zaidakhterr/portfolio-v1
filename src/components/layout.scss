@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 @import "../styles/variables";
+@import "../styles/breakpoints";
 
 :root {
   font-size: 16px !important;
@@ -90,7 +91,7 @@ a {
   &-fluid {
     padding: 0 32px;
     width: 100%;
-    max-width: none;
+    max-width: 100%;
   }
 }
 
@@ -288,6 +289,24 @@ a {
         }
       }
     }
+  }
+}
+
+.header-desktop {
+  display: block;
+}
+
+.header-mobile {
+  display: none;
+}
+
+@include sm {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
   }
 }
 

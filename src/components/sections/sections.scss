@@ -4,6 +4,7 @@
 .section {
   width: 100%;
   padding: 40px 32px;
+  margin-bottom: 32px;
 
   &.full {
     min-height: calc(100vh - 56px);
@@ -34,6 +35,7 @@
   .section-description {
     font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
     padding: 12px 0;
+    margin-bottom: 32px;
   }
 }
 
