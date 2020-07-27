@@ -69,6 +69,9 @@ const Work = () => {
         <h2>Work</h2>
         <span></span>
       </div>
+      <p style={{ marginBottom: 0 }} className="section-description">
+        Here are some things I've built.
+      </p>
       <div className="projects">
         <Project
           title="E-Commerce Site"

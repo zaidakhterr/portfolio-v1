@@ -233,7 +233,7 @@
 #work {
   .projects {
     .project {
-      margin: 80px 16px;
+      margin: 80px 0px;
       display: flex;
       text-align: right;
       align-items: center;
@@ -377,6 +377,7 @@
       }
 
       @include md {
+        margin: 48px 0px;
         flex-direction: column;
         text-align: left;
 
