@@ -84,18 +84,24 @@ const Work = () => {
           title="E-Commerce Site"
           left
           image={images.files.nodes[0].childImageSharp.fluid}
-          technologies={["react", "redux", "firebase"]}
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur animi architecto reprehenderit porro eligendi ipsum voluptas vitae consectetur fugiat excepturi!"
-          githubLink="https://via.placeholder.com/150"
-          siteLink=""
+          technologies={["React", "Redux", "Firebase", "Stripe"]}
+          description="An e-commerce site with clean responsive design where you can Sign In using your Google Account, Add items to cart and checkout using Stripe."
+          githubLink="https://github.com/zaidakhterr/crown-clothing"
+          siteLink="https://crown-clothing-app.herokuapp.com"
         />
         <Project
-          title="E-Commerce Site"
+          title="Face Detector App"
           image={images.files.nodes[1].childImageSharp.fluid}
-          technologies={["react", "redux", "firebase", "smth"]}
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur animi architecto reprehenderit porro eligendi ipsum voluptas vitae consectetur fugiat excepturi!"
-          githubLink="https://via.placeholder.com/150"
-          siteLink="https://via.placeholder.com/150"
+          technologies={[
+            "React",
+            "Redux",
+            "Clarifai API",
+            "Express",
+            "JWT",
+            "MongoDB",
+          ]}
+          description="An App that allows you to detect multiple faces in a picture. An express server handles user sign in and Clarifai's Face Detection API detects faces in the images."
+          githubLink="https://github.com/zaidakhterr/face-detection-app"
         />
       </div>
     </>
