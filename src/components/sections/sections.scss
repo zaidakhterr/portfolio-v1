@@ -233,7 +233,7 @@
 #work {
   .projects {
     .project {
-      margin: 64px 16px;
+      margin: 80px 16px;
       display: flex;
       text-align: right;
       align-items: center;
@@ -372,6 +372,47 @@
 
           .tag-list {
             justify-content: flex-start;
+          }
+        }
+      }
+
+      @include md {
+        flex-direction: column;
+        text-align: left;
+
+        .image-container {
+          order: 1;
+
+          &::before {
+            content: none;
+          }
+
+          img {
+            filter: grayscale(0%);
+          }
+        }
+
+        .content-container {
+          order: 2;
+          padding: 32px 8px;
+
+          .links {
+            justify-content: flex-start;
+          }
+
+          .tag-list {
+            justify-content: flex-start;
+          }
+        }
+
+        &.left {
+          .image-container {
+            order: 1;
+          }
+
+          .content-container {
+            order: 2;
+            padding: 32px 8px;
           }
         }
       }
