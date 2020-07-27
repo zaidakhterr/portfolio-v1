@@ -310,6 +310,7 @@
             padding: 0;
             margin-right: 12px;
             height: 24px;
+            width: 24px;
 
             &:last-of-type {
               margin-right: 0;
@@ -399,6 +400,12 @@
 
           .links {
             justify-content: flex-start;
+
+            a {
+              height: 30px;
+              width: 30px;
+              margin-right: 16px;
+            }
           }
 
           .tag-list {

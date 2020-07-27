@@ -117,7 +117,7 @@ const Contact = () => {
           Discuss a project or just want to say hi? My inbox is open for all.
         </p>
       </Fade>
-      <Fade bottom>
+      <Fade bottom distance="128px">
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="input-group">
             <label htmlFor="name">Name</label>
