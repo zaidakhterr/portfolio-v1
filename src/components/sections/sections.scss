@@ -229,3 +229,126 @@
     }
   }
 }
+
+#work {
+  .projects {
+    .project {
+      margin: 64px 16px;
+      display: flex;
+      text-align: right;
+      align-items: center;
+
+      .image-container {
+        flex: 1;
+        order: 1;
+        width: 100%;
+        height: 400px;
+
+        @include lg {
+          height: 300px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .content-container {
+        flex: 1;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 0;
+        height: fit-content;
+
+        h3 {
+          font-size: unquote("min(2rem, calc(1.5rem + 1vw))");
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
+          margin-bottom: 16px;
+        }
+
+        .links {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 16px;
+
+          a {
+            padding: 0;
+            margin-right: 12px;
+            height: 24px;
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+
+            svg {
+              height: 100%;
+
+              path {
+                fill: $primary;
+                transition: all 200ms;
+              }
+            }
+
+            &:hover {
+              svg path {
+                fill: #000;
+              }
+            }
+          }
+        }
+
+        .tag-list {
+          margin: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+
+          .tag {
+            color: #fff;
+            padding: 2px 8px;
+            background-color: $primary;
+            border: 1px solid rgba($primary, 0.5);
+            border-radius: 3px !important;
+            font-size: 0.8rem;
+            margin-right: 4px;
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      &.left {
+        text-align: left;
+
+        .image-container {
+          order: 2;
+        }
+
+        .content-container {
+          order: 1;
+          padding-right: 16px;
+          padding-left: 0;
+
+          .links {
+            justify-content: flex-start;
+          }
+
+          .tag-list {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

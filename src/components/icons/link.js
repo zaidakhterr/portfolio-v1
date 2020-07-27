@@ -2,7 +2,7 @@ import React from "react"
 
 const LinkIcon = () => (
   <svg
-    className="link"
+    className="link-icon"
     aria-hidden="true"
     focusable="false"
     data-prefix="fas"
