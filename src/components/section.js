@@ -13,7 +13,7 @@ const Section = ({ fluid = false, full = false, section, id }) => {
     case "hero":
       renderSection = <Hero />
       break
-    case "work":
+    case "projects":
       renderSection = <Work />
       break
     case "blog":

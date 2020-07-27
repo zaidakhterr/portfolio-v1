@@ -32,12 +32,20 @@ const Project = ({
           </div>
           <div className="links">
             {githubLink && (
-              <a href={githubLink}>
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
                 <GithubIcon />
               </a>
             )}
             {siteLink && (
-              <a href={siteLink}>
+              <a
+                href={siteLink}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
                 <LinkIcon />
               </a>
             )}

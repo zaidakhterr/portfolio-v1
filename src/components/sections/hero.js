@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade"
 const Hero = () => {
   return (
     <>
-      <Fade top distance="128px">
+      <Fade top>
         <h1>Hi, my name is</h1>
       </Fade>
       <Fade left duration={1200} distance="128px">
@@ -18,7 +18,7 @@ const Hero = () => {
           blazing-fast websites using modern web technologies.
         </p>
       </Fade>
-      <Fade bottom distance="128px">
+      <Fade bottom>
         <div className="btn-group">
           <Link to="/#work">
             <button className="btn btn-primary">View My Work</button>
