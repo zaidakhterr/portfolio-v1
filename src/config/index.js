@@ -42,7 +42,7 @@ module.exports = {
       to: "/#work",
     },
     {
-      name: "Skills",
+      name: "About",
       to: "/#skills",
     },
     {
