@@ -99,7 +99,11 @@ const Contact = () => {
           method: "post",
           url: "https://zaidakhterr.netlify.app/.netlify/functions/sendMail",
           headers: {
+            "Cache-Control": "no-cache",
             "Content-Type": "application/json",
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            Connection: "keep-alive",
           },
           data: data,
         })
