@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer")
+const queryString = require("query-string")
 
 const { MAIL_LOGIN, MAIL_PASSWORD } = process.env
 
@@ -10,7 +11,8 @@ exports.handler = function (event, context, callback) {
       pass: MAIL_PASSWORD,
     },
   })
-  const { name, email, subject, message } = JSON.parse(event.body)
+
+  const { name, email, subject, message } = queryString.parse(event.body)
 
   transporter.sendMail(
     {
