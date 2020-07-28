@@ -3,8 +3,6 @@ import Fade from "react-reveal/Fade"
 import * as EmailValidator from "email-validator"
 import axios from "axios"
 
-axios.defaults.headers.post["Content-Type"] = "application/json"
-
 const useInputError = (state, email = false) => {
   const [dirty, setDirty] = useState(false)
   const [error, setError] = useState(false)
@@ -92,7 +90,12 @@ const Contact = () => {
         setError(false)
         await axios.post(
           "https://zaidakhterr.netlify.app/.netlify/functions/sendMail",
-          { name, email, subject, message }
+          { name, email, subject, message },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
         )
         setLoading(false)
         resetFields()
