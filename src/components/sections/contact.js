@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react"
 import Fade from "react-reveal/Fade"
 import * as EmailValidator from "email-validator"
 import axios from "axios"
-import queryString from "query-string"
 
 const useInputError = (state, email = false) => {
   const [dirty, setDirty] = useState(false)
@@ -89,17 +88,22 @@ const Contact = () => {
       try {
         setLoading(true)
         setError(false)
-        const url = queryString.stringifyUrl({
-          url: `https://zaidakhterr.netlify.app/.netlify/functions/sendMail`,
-          query: {
-            name: name,
-            email: email,
-            subject: subject,
-            message: message,
-          },
+        const data = JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
         })
 
-        await axios.get(url)
+        await axios({
+          method: "post",
+          url: `https://zaidakhterr.netlify.app/.netlify/functions/sendMail`,
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "*/*",
+          },
+          data: data,
+        })
         setLoading(false)
         resetFields()
       } catch (err) {
