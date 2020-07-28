@@ -12,7 +12,7 @@ exports.handler = function (event, context, callback) {
     },
   })
 
-  const { name, email, subject, message } = queryString.parse(event.body)
+  const { name, email, subject, message } = event.queryStringParams
 
   transporter.sendMail(
     {
