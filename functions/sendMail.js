@@ -10,7 +10,7 @@ exports.handler = function (event, context, callback) {
       pass: MAIL_PASSWORD,
     },
   })
-  const { name, email, subject, message } = event.body
+  const { name, email, subject, message } = JSON.parse(event.body)
 
   transporter.sendMail(
     {

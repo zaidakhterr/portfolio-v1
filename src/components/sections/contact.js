@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Fade from "react-reveal/Fade"
 import * as EmailValidator from "email-validator"
+import axios from "axios"
 
 const useInputError = (state, email = false) => {
   const [dirty, setDirty] = useState(false)
@@ -87,19 +88,21 @@ const Contact = () => {
       try {
         setLoading(true)
         setError(false)
-        await fetch(
-          "https://zaidakhterr.netlify.app/.netlify/functions/sendMail",
-          {
-            method: "POST",
-            mode: "cors",
-            cache: "no-cache",
-            credentials: "same-origin",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ name, email, subject, message }),
-          }
-        )
+        const data = JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+        })
+
+        await axios({
+          method: "post",
+          url: "https://zaidakhterr.netlify.app/.netlify/functions/sendMail",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: data,
+        })
         setLoading(false)
         resetFields()
       } catch (err) {
