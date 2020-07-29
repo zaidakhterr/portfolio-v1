@@ -124,7 +124,7 @@ select:-webkit-autofill:focus {
   bottom: 0;
   width: 100%;
   height: 120px;
-  background-color: $secondary;
+  background-color: rgba($secondary,0.5);
 
   .container {
     height: 100%;
