@@ -20,8 +20,8 @@ const Hero = () => {
       </Fade>
       <Fade bottom>
         <div className="btn-group">
-          <Link to="/#work" className="btn btn-primary">
-            View My Work
+          <Link to="/#projects">
+            <button className="btn btn-primary">View My Work</button>
           </Link>
           <a
             href="/resume.pdf"
