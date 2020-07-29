@@ -54,7 +54,7 @@ const Blog = () => {
       </Fade>
       <div className="article-list">
         {data.allDevArticles.nodes.map((node, i) => (
-          <Fade bottom>
+          <Fade bottom distance="128px">
             <Article article={node.article} />
           </Fade>
         ))}
