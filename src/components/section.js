@@ -5,6 +5,7 @@ import Hero from "./sections/hero"
 import Work from "./sections/work"
 import Blog from "./sections/blog"
 import Contact from "./sections/contact"
+import About from "./sections/about"
 
 const Section = ({ fluid = false, full = false, section, id }) => {
   let renderSection = null
@@ -18,6 +19,9 @@ const Section = ({ fluid = false, full = false, section, id }) => {
       break
     case "blog":
       renderSection = <Blog />
+      break
+    case "about":
+      renderSection = <About />
       break
     case "contact":
       renderSection = <Contact />
