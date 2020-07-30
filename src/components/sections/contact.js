@@ -26,12 +26,10 @@ const useInputError = (state, email = false) => {
 const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
 
   const [nameError, setNameError] = useInputError(name)
   const [emailError, setEmailError] = useInputError(email, true)
-  const [subjectError, setSubjectError] = useInputError(subject)
   const [messageError, setMessageError] = useInputError(message)
 
   const [error, setError] = useState(false)
@@ -40,11 +38,9 @@ const Contact = () => {
   const resetFields = () => {
     setName("")
     setEmail("")
-    setSubject("")
     setMessage("")
     setNameError(false)
     setEmailError(false)
-    setSubjectError(false)
     setMessageError(false)
   }
 
@@ -57,10 +53,7 @@ const Contact = () => {
       setEmailError(true)
       return true
     }
-    if (!subjectError && subject.length === 0) {
-      setSubjectError(true)
-      return true
-    }
+
     if (!messageError && message.length === 0) {
       setMessageError(true)
       return true
@@ -69,15 +62,12 @@ const Contact = () => {
   }, [
     name,
     email,
-    subject,
     message,
     nameError,
     emailError,
-    subjectError,
     messageError,
     setNameError,
     setEmailError,
-    setSubjectError,
     setMessageError,
   ])
 
@@ -91,7 +81,6 @@ const Contact = () => {
         const data = JSON.stringify({
           name: name,
           email: email,
-          subject: subject,
           message: message,
         })
 
@@ -149,18 +138,6 @@ const Contact = () => {
               value={email}
               onChange={e => setEmail(e.target.value)}
               className={`${emailError ? "input-error" : ""}`}
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="subject">Subject</label>
-            <input
-              autoComplete="off"
-              type="text"
-              name="subject"
-              id="subject"
-              value={subject}
-              onChange={e => setSubject(e.target.value)}
-              className={`${subjectError ? "input-error" : ""}`}
             />
           </div>
           <div className="input-group">
