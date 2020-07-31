@@ -16,7 +16,7 @@
     justify-content: space-between;
 
     h2 {
-      font-size: unquote("min(4rem, calc(2.5rem + 1vw))");
+      font-size: unquote("clamp(2.5rem, calc(2rem + 1vw),3.5rem)");
       font-weight: 400;
       color: $primary;
       position: relative;
@@ -427,6 +427,94 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+#about {
+  .section-heading {
+    margin-bottom: 64px;
+  }
+
+  .content {
+    display: flex;
+
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .gatsby-image-wrapper {
+        box-shadow: 0px 0px 50px 5px rgba($primary, 0.1);
+        width: unquote("clamp(240px, calc(200px + 10vw),340px)");
+        height: unquote("clamp(240px, calc(200px + 10vw),340px)");
+
+        img {
+          filter: grayscale(50%);
+
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+      }
+    }
+
+    .text-container {
+      font-size: unquote("min(1.5rem, calc(1rem + 0.25vw))");
+      flex: 1;
+
+      p {
+        margin-bottom: 16px;
+
+        span {
+          color: $primary;
+          font-weight: bold;
+        }
+      }
+
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        li {
+          margin-left: 16px;
+          position: relative;
+
+          &::before {
+            content: " ";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            left: -12px;
+            top: 8px;
+            border-radius: 3px;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 6px solid $primary;
+          }
+        }
+      }
+    }
+
+    @include sm {
+      flex-direction: column;
+
+      .image-container {
+        order: 1;
+        margin-bottom: 32px;
+
+        .gatsby-image-wrapper {
+          img {
+            filter: grayscale(0%);
+          }
+        }
+      }
+
+      .text-container {
+        order: 2;
       }
     }
   }
