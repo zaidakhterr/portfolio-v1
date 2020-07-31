@@ -7,7 +7,11 @@ const Footer = () => {
       <div className="container">
         <SocialLinks />
         <p>
-          Built with <span role="image">💖</span> by Zaid Akhter.
+          Built with{" "}
+          <span role="img" aria-label="Heart">
+            💖
+          </span>{" "}
+          by Zaid Akhter.
         </p>
       </div>
     </footer>
