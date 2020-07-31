@@ -481,6 +481,7 @@
 
         li {
           margin-left: 16px;
+          margin-bottom: 4px;
           position: relative;
 
           &::before {
@@ -504,7 +505,7 @@
 
       .image-container {
         order: 1;
-        margin-bottom: 32px;
+        margin-bottom: 48px;
 
         .gatsby-image-wrapper {
           img {
