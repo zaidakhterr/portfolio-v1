@@ -84,7 +84,7 @@ const Work = () => {
       </div>
       <Fade>
         <p style={{ marginBottom: 0 }} className="section-description">
-          Here are some things I've built.
+          Here are some things I've built in my free time.
         </p>
       </Fade>
       <div className="projects">
