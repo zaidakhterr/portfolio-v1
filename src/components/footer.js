@@ -6,6 +6,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <SocialLinks />
+        <p>
+          Built with <span role="image">💖</span> by Zaid Akhter.
+        </p>
       </div>
     </footer>
   )
