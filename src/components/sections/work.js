@@ -89,9 +89,23 @@ const Work = () => {
       </Fade>
       <div className="projects">
         <Project
-          title="E-Commerce Site"
+          title="Q/A Site"
           left
           image={images.files.nodes[0].childImageSharp.fluid}
+          technologies={[
+            "React",
+            "Ant-Design",
+            "Node",
+            "AWS",
+            "Algolia-Search",
+          ]}
+          description="An fullstack Question/Answer site inspired by stack overflow. UI built with React and Ant-Design and a RESTful API built with AWS Lambda. Integrated Algolia API to search throgh the questions."
+          githubLink="https://github.com/zaidakhterr/we-frontend"
+          siteLink="https://nedians-forum.web.app/"
+        />
+        <Project
+          title="E-Commerce Site"
+          image={images.files.nodes[1].childImageSharp.fluid}
           technologies={["React", "Redux", "Firebase", "Stripe"]}
           description="An e-commerce site with clean responsive design where you can Sign In using your Google Account, Add items to cart and checkout using Stripe."
           githubLink="https://github.com/zaidakhterr/crown-clothing"
@@ -99,7 +113,8 @@ const Work = () => {
         />
         <Project
           title="Face Detector App"
-          image={images.files.nodes[1].childImageSharp.fluid}
+          left
+          image={images.files.nodes[2].childImageSharp.fluid}
           technologies={[
             "React",
             "Redux",

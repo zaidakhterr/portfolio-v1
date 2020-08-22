@@ -245,28 +245,6 @@
         box-shadow: 0px 0px 50px rgba($primary, 0.1);
         position: relative;
 
-        &::before {
-          position: absolute;
-          content: " ";
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          background-color: rgba($primary, 0.01);
-          transition: all 250ms;
-        }
-
-        &:hover {
-          &::before {
-            background-color: transparent;
-          }
-
-          img {
-            filter: grayscale(0%);
-          }
-        }
-
         .gatsby-image-wrapper {
           width: 100%;
           height: 100%;
@@ -277,7 +255,6 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
-          filter: grayscale(60%);
           transition: all 250ms;
         }
       }
@@ -450,14 +427,6 @@
         box-shadow: 0px 0px 50px 5px rgba($primary, 0.1);
         width: unquote("clamp(240px, calc(200px + 10vw),340px)");
         height: unquote("clamp(240px, calc(200px + 10vw),340px)");
-
-        img {
-          filter: grayscale(50%);
-
-          &:hover {
-            filter: grayscale(0%);
-          }
-        }
       }
     }
 
