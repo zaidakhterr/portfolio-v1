@@ -38,7 +38,10 @@ function SEO() {
           property: `og:site_name`,
           content: config.siteTitle,
         },
-
+        {
+          property: `og:image`,
+          content: `https://github.com/zaidakhterr/portfolio-v1/blob/master/src/images/site.png`,
+        },
         {
           property: "og:locale",
           content: config.siteLanguage,
