@@ -5,6 +5,7 @@
   My first ever portfolio site <a href="https://zaidakhterr.me" target="_blank">zaidakhterr.me</a>, built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
+<img align="center" width="100%" src="https://github.com/zaidakhterr/portfolio-v1/blob/master/src/images/site.png" alt="Website"/>
 
 <p align="center">
   <a href="https://github.com/zaidakhter/portfolio-v1/blob/master/LICENSE">
