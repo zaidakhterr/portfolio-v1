@@ -50,7 +50,7 @@ module.exports = {
       to: "/#about",
     },
     {
-      name: "Contact Me",
+      name: "Contact",
       to: "/#contact",
     },
   ],
