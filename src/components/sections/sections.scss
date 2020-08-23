@@ -238,6 +238,10 @@
       text-align: right;
       align-items: center;
 
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
       .image-container {
         flex: 1;
         order: 1;
