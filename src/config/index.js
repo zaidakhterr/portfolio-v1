@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "Zaid Akhter | Web Developer",
   siteDescription:
-    "I am a Fullstack Developer from Karachi, PK who specializes in building eye-catching and blazing-fast websites using modern web technologies.",
+    "Zaid Akhter is a Fullstack Developer from Karachi, PK who specializes in building eye-catching and blazing-fast websites using modern web technologies.",
   siteKeywords:
     "Zaid Akhter, Zaid, Akhter, zaidakhterr, front-end engineer, web developer, full-stack developer, javascript, react.js, node.js",
   siteUrl: "https://zaidakhterr.me/",
